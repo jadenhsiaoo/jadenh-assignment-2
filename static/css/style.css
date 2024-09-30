@@ -1,0 +1,130 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #74f800; /* Dark background for contrast */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #eceff4; /* Light text for better readability */
+}
+
+/* Container Styling */
+.container {
+    text-align: center;
+    background: #000000;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+    width: 500px; /* Reduced width for a more vertical design */
+    margin: auto; /* Centering container */
+}
+
+/* Input Group for Clusters */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Number Input Styling */
+#num-clusters {
+    padding: 10px;
+    font-size: 1rem;
+    width: 80px;
+    border: 2px solid #5e81ac;
+    border-radius: 5px;
+    background-color: #4c566a;
+    color: #eceff4;
+    outline: none;
+    margin-left: 10px;
+    transition: border-color 0.3s ease;
+}
+
+#num-clusters:hover, #num-clusters:focus {
+    border-color: #88c0d0;
+}
+
+/* Input Group for Dropdown */
+.input-group {
+    margin-bottom: 20px;
+}
+
+/* Controls Styling */
+.controls {
+    display: flex;
+    flex-direction: column; /* Make the controls stack vertically */
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.button-group {
+    display: flex;
+    flex-direction: column; /* Stack the buttons vertically */
+    gap: 10px; /* Add space between buttons */
+    margin-bottom: 20px;
+}
+
+/* Dropdown Menu */
+#init-method {
+    padding: 10px;
+    font-size: 1rem;
+    border: 2px solid #5e81ac;
+    border-radius: 5px;
+    background-color: #4c566a;
+    color: #eceff4;
+    outline: none;
+    transition: border-color 0.3s ease;
+    margin-bottom: 10px; /* Spacing from label */
+}
+
+#init-method:hover, #init-method:focus {
+    border-color: #88c0d0;
+}
+
+/* Button Styling */
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    width: 100%; /* Ensure buttons take full width of the container */
+}
+
+/* Shared Color for Step and Converge Buttons */
+button#step-btn, button#converge-btn {
+    background-color: #a3be8c; /* Same green color for both */
+    color: #2e3440;
+}
+
+button#generate-btn {
+    background-color: #5e81ac;
+    color: #eceff4;
+}
+
+button#reset-btn {
+    background-color: #bf616a;
+    color: #eceff4;
+}
+
+/* Button Hover Effects */
+button:hover {
+    transform: translateY(-3px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Plot Area */
+#plot-area {
+    width: 100%;
+    height: 600px; /* Increased height for a larger plot */
+    margin-top: 20px;
+    background-color: #4c566a;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.4);
+}

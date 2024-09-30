@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KMeans Clustering Visualization</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>KMeans Clustering Visualization</h1>
+        
+        <div class="controls">
+            <!-- Number of Clusters Input -->
+            <div class="input-group">
+                <label for="num-clusters">Number of Clusters (k):</label>
+                <input type="number" id="num-clusters" min="1" value="3">
+            </div>
+
+            <!-- Initialization Method Dropdown -->
+            <div class="input-group">
+                <label for="init-method">Initialization Method:</label>
+                <select id="init-method">
+                    <option value="random">Random</option>
+                    <option value="farthest-first">Farthest First</option>
+                    <option value="kmeans++">KMeans++</option>
+                    <option value="manual">Manual</option>
+                </select>
+            </div>
+            
+            <div class="button-group">
+                <button id="generate-btn">Generate New Dataset</button>
+                <button id="step-btn">Step Through KMeans</button>
+                <button id="converge-btn">Run to Convergence</button>
+                <button id="reset-btn">Reset</button>
+            </div>
+        </div>
+    
+        <div id="plot-area"></div> <!-- Placeholder for the 2D plot -->
+
+    </div>    
+    
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
