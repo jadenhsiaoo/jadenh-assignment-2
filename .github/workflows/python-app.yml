@@ -1,0 +1,38 @@
+name: Python App Workflow
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v3
+
+    - name: Set up Python
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.9' 
+
+    - name: Install dependencies
+      run: make install
+
+    - name: Run the server
+      run: |
+        make run &
+        sleep 10  # Sleep for a few seconds to ensure the server has time to start up
+
+    - name: Verify server is running
+      run: |
+        curl --fail http://localhost:3000 || (echo "Server did not start as expected" && exit 1)
+
+    - name: Clean up
+      run: |
+        pkill -f "python" || true  # Ensure that the server process is terminated
